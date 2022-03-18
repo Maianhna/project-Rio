@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio shop</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css"
+        integrity="sha512-QmxybGIvkSI8+CGxkt5JAcGOKIzHDqBMs/hdemwisj4EeGLMXxCm9h8YgoCwIvndnuN1NdZxT4pdsesLXSaKaA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="head-wrap">
+            <div class="logo">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24" fill="none" stroke="#4a4937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> -->
+                <h3>RIO</h3>
+            </div>
+
+            <ul class="menu">
+                <li class="list__items">
+                    <a href="../index.html" class="item">HOME</a>
+                </li>
+
+                <li class="list__items">
+                    <a href="../aboutus/aboutus.html" class="item">ABOUT US</a>
+                </li>
+
+                <li class="list__items">
+                    <a href="../blog/blog.html" class="item">BLOG</a>
+                </li>
+
+                <li class="list__items">
+                    <a href="./shop.html" class="item">SHOP</a>
+                </li>
+
+                <!-- <li class="list__items">
+                        <a href="" class="item">CONTACT</a>
+                    </li>
+                     -->
+            </ul>
+
+            <div class="space" style="width: 100px;"></div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- btn start -->
+    <div class="head-btn">
+        <div class="tab-btn">
+            <a href="#" class="btn" onclick="document.getElementById('shopping-cart').style.display='block'"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" class="btn" onclick="document.getElementById('wish-list').style.display='block'"><i
+                    class="fa-solid fa-heart"></i></a>
+            <a href="#" class="btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+        <div class="content" id="shopping-cart">
+            <div class="form-box"></div>
+            <div class="content-tab">
+                <div class="title">
+                    <span class="tab-name">Shopping Cart</span>
+                    <span onclick="document.getElementById('shopping-cart').style.display='none'" class="close"><i
+                            class="fa-solid fa-x"></i></span>
+                </div>
+                <hr>
+                <div class="shopping-cart ">
+                    <div class="cart-item">
+                        <!-- <img src="https://klbtheme.com/furnob/wp-content/uploads/2021/12/hay-1-600x600.jpg" alt="" class="cart-img">
+                        <div class="desc">
+                            <span class="cart-title">Around Coffee Table</span>
+                            <div class="cart-price">$499.63</div>
+                            <input class="cart-quantity-input" type="number" value="1">
+                        </div>
+                        <a href="" class="remove-item"><i class="fa-solid fa-circle-xmark"></i></a> -->
+                    </div>
+                    <!-- <div class="pdt"></div> -->
+                    <!-- <div class="line"></div> -->
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total:</strong>
+                        <span class="cart-total-price">$0</span>
+                    </div>
+                    <button type="button" class="btn-purchase">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="wish-list">
+            <div class="form-box"></div>
+            <div class="content-tab">
+                <div class="title">
+                    <span class="tab-name">Wishlist</span>
+                    <span onclick="document.getElementById('wish-list').style.display='none'" class="close"
+                        style="padding-left: 60px;"><i class="fa-solid fa-x"></i></span>
+                </div>
+                <hr>
+                <div class="wish-list">
+                    <div class="product">
+                        <img src="https://klbtheme.com/furnob/wp-content/uploads/2021/12/hay-1-600x600.jpg" alt="">
+                        <div class="desc">
+                            <span class="cart-title">Around Coffee Table</span>
+                            <div class="cart-price">$499.63</div>
+                            <button type="button" class="product-add">ADD TO CART</button>
+                        </div>
+                        <a href="" class="remove-item"><i class="fa-solid fa-circle-xmark"></i></a>
+
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- btn end -->
+
+
+
+    <!-- title start -->
+    <hr>
+    <section class="heading">
+        <div class="title">
+            <h1>Shop</h1>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="delimiter"></span>
+                <a href="./shop.html">Shop</a>
+            </div>
+        </div>
+
+        <span></span>
+    </section>
+    <hr>
+    <!-- title end -->
+
+
+    <!-- product start -->
+    <section class="list__products">
+        <div class="products"></div>
+        <div class="pagination-product"></div>
+    </section>
+    <!-- product end -->
+
+
+    <!-- footer start -->
+    <section class="footer">
+        <div class="footer1">
+            <h3>RIO</h3>
+            <p>Sophisticated simplicity for the <br>
+                independent mind.</p>
+            <div class="follow">
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true" title="follow RIO on facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true" title="follow RIO on instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true" title="follow RIO on twitter"></i></a>
+                <a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true" title="call RIO now"></i></a>
+            </div>
+        </div>
+
+        <ul class="list__items">
+            <div class="title">
+                <h4>Help & Information</h4>
+            </div>
+            <li class="item item1">
+                <a href="">Pagination</a>
+            </li>
+            <li class="item">
+                <a href="">Term & Conditions</a>
+            </li>
+            <li class="item">
+                <a href="">Contact</a>
+            </li>
+            <li class="item">
+                <a href="">Accessories</a>
+            </li>
+            <li class="item">
+                <a href="">Term of use</a>
+            </li>
+        </ul>
+
+        <ul class="list__items">
+            <div class="title">
+                <h4>About us</h4>
+            </div>
+            <li class="item item1">
+                <a href="">Help Center</a>
+            </li>
+            <li class="item">
+                <a href="">Address Store</a>
+            </li>
+            <li class="item">
+                <a href="">Privacy Policy</a>
+            </li>
+            <li class="item">
+                <a href="">Receivers & Amplifiers</a>
+            </li>
+            <li class="item">
+                <a href="">RioStore</a>
+            </li>
+        </ul>
+
+        <ul class="list__items">
+            <div class="title">
+                <h4>Categories</h4>
+            </div>
+            <li class="item item1">
+                <a href="">Armchair & Footstools</a>
+            </li>
+            <li class="item">
+                <a href="">Leather Furniture</a>
+            </li>
+            <li class="item">
+                <a href="">Console Table</a>
+            </li>
+            <li class="item">
+                <a href="">Bedroom Benches</a>
+            </li>
+            <li class="item">
+                <a href="">Bookcases % Shelving</a>
+            </li>
+        </ul>
+    </section>
+    <!-- footer end -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"
+        integrity="sha512-1zzZ0ynR2KXnFskJ1C2s+7TIEewmkB2y+5o/+ahF7mwNj9n3PnzARpqalvtjSbUETwx6yuxP5AJXZCpnjEJkQw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/3a2f57279e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./shop.js"></script>
+</body>
+
+</html>

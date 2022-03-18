@@ -1,0 +1,382 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    font-family: "Playfair Display", serif;
+
+}
+
+/* header start */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #fffbeb;
+    /* position: absolute; */
+}
+
+header .head-wrap{
+    max-width: 90%;
+    height: 98px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .head-wrap .logo{
+    width: auto;
+    height: 100%;
+}
+
+header .head-wrap .logo h3{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: 'Ephesis', cursive;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 100;
+    /* color: ; */
+    
+}
+
+header .head-wrap .menu{
+    display: flex;
+    align-items: center;
+}
+
+header .head-wrap .menu .list__items{
+    list-style: none;
+    padding: 0 40px;
+    margin-right: 20px;
+}
+
+header .head-wrap .menu .list__items .item{
+    color: #2c6335;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all .3s ease;
+    position: relative;
+}
+
+header .head-wrap .menu .list__items .item::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #a0cca7;
+    transition: all .3s ease;
+}
+
+header .head-wrap .menu .list__items .item:hover{
+    width: 100%;
+    color: #a0cca7;
+}
+
+header .head-wrap .menu .list__items .item:hover::before{
+    width: 100%;
+    /* right: auto; */
+    color: #a0cca7;
+}
+/* header ends */
+
+input, textarea {
+    outline: none;
+}
+
+/* info starts */
+
+.info {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.info .title {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.info .title .line {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.info .title .subline {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: -30px;
+    opacity: 0.5;
+}
+
+.info .about .thumb img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 1024px;
+    height: 639px;
+}
+
+.info .about .text {
+    margin: 20px 163px 30px;
+}
+
+.info .about .text p {
+    line-height: 1.9;
+    color: #a8a8a8;
+}
+
+.info .other {
+    /* background-color: aqua; */
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0 163px 20px;
+    border-top: #d6d6d6 1px solid;
+}
+
+.info .other .titleo {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+
+}
+
+.info .list__pictures {
+    margin: 0px 100px 30px;
+    display: flex;
+    position: relative;
+}
+
+.info .list__pictures .pic {
+    
+    margin: 0 26px 30px;
+}
+
+.info .list__pictures .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: 60px;
+    z-index: 10;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: brightness(100%);
+    transition: all .3s ease;
+}
+
+.info .list__pictures .slick-arrow:hover {
+    opacity: 0.5;
+    filter: brightness(50%);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.info .list__pictures .slick-arrow i {
+    font-size: 30px;
+}
+
+.info .list__pictures  .pull-right {
+    right: 0;
+}
+.info .list__pictures .pull-left {
+    left: 0;
+}
+
+
+.info .list__pictures .pic .thumb1 {
+    height: 300px;
+    width: 331px;
+    overflow: hidden;
+}
+.info .list__pictures .pic .thumb1 img {
+    height: 100%;
+    width: 100%;
+    transition: .3s all ease-in-out;
+}
+
+.info .list__pictures .pic .thumb1 img:hover {
+    transform: scale(1.2);
+    transition: ease-in-out .3s all;
+    opacity: 0.7;
+}
+
+.info .list__pictures .pic h4 {
+    text-transform: uppercase;
+    color: #a8a8a8;
+    font-size: 12px;
+}
+
+.info .list__pictures .inh {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d6d6d6;
+    margin-bottom: 20px;
+}
+
+.info .list__pictures .inh .txto {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.info .list__pictures .inh .txto:hover {
+    color: #a8a8a8;
+    transition: all .3s ease;
+}
+
+.info .list__pictures .picbtn {
+    display: inline;
+    padding-bottom: 5px;
+    border-bottom: black solid 1px;
+}
+
+.info .list__pictures .picbtn .btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    transition: all .4s ease;
+}
+
+.info .list__pictures .picbtn .btn:hover {
+    color: #a8a8a8;
+    transition: all .4s ease;   
+}
+
+/* info ends */
+
+
+/* footer starts */
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 60px 30px 90px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: #fffbeb;
+}
+
+/* .footer .footer1 {
+    margin: 0px 20px;
+} */
+
+.footer .footer1 h3 {
+    font-family: 'Ephesis', cursive;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 0px;
+}
+
+.footer .footer1 p {
+    line-height: 16px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.footer .footer1 .follow {
+    margin-top: 30px;
+}
+
+.footer .footer1 .follow a {
+    margin-right: 24px;
+}
+
+.footer .footer1 .follow a i {
+    color: black;
+    transition: all .3s ease;
+}
+
+.footer .footer1 .follow a i:hover{
+    color: #a0cca7;
+
+}
+
+.footer .list__items {
+    margin: -10px;
+}
+.footer .list__items h4 {
+    font-size: 26px;
+}
+
+.footer .list__items .item {
+    line-height: 2;
+    list-style: none;
+}
+
+.footer .list__items .item a {
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease;
+    position: relative;
+    font-size: 17px;
+    line-height: 2.6;
+    opacity: 0.8;
+}
+
+.footer .list__items .item a:hover{
+    color: #a0cca7;
+}
+
+.footer .list__items .item a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #a0cca7;
+    transition: all .3s ease;
+}
+
+
+.footer .list__items .item a:hover {
+    color: #a0cca7;
+}
+
+.footer .list__items .item a:hover::before {
+    width: 100%;
+    color: #a0cca7;
+}
+
+.footer .list__items .title {
+    border-bottom:1px solid rgb(34, 33, 26); 
+    transition: all .3s ease;
+}
+
+.footer .list__items .item1 {
+    margin-top: 20px;
+}
+
+.footer .list__items .title:hover {
+    color: #a0cca7;
+    cursor: pointer;
+}
+
+/* footer ends */
+
+
+
+
+
+
+

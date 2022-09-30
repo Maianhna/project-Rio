@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css"
         integrity="sha512-QmxybGIvkSI8+CGxkt5JAcGOKIzHDqBMs/hdemwisj4EeGLMXxCm9h8YgoCwIvndnuN1NdZxT4pdsesLXSaKaA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="shop.css">
 </head>
@@ -108,18 +111,18 @@
                         style="padding-left: 60px;"><i class="fa-solid fa-x"></i></span>
                 </div>
                 <hr>
-                <div class="wish-list">
-                    <div class="product">
+                <div class="wishlist-item">
+                    <!-- <div class="wishlist-pdt">
                         <img src="https://klbtheme.com/furnob/wp-content/uploads/2021/12/hay-1-600x600.jpg" alt="">
                         <div class="desc">
-                            <span class="cart-title">Around Coffee Table</span>
-                            <div class="cart-price">$499.63</div>
+                            <span class="wishlist-title">Around Coffee Table</span>
+                            <div class="wishlist-price">$499.63</div>
                             <button type="button" class="product-add">ADD TO CART</button>
                         </div>
                         <a href="" class="remove-item"><i class="fa-solid fa-circle-xmark"></i></a>
 
                     </div>
-                    <div class="line"></div>
+                    <div class="line"></div> -->
                 </div>
             </div>
         </div>
@@ -131,7 +134,9 @@
     <!-- title start -->
     <hr>
     <section class="heading">
+        <div class="blur"></div>
         <div class="title">
+            
             <h1>Shop</h1>
             <div class="breadcrumb">
                 <a href="../index.html">Home</a>
@@ -146,9 +151,102 @@
     <!-- title end -->
 
 
+    <!-- categories start -->
+    <section class="list-categories ">
+        <div class="category" onclick="filterProduct('all')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/all.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">All</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('living-room')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/living-room.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Living-room</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('bed-room')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/bed-room.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Bed-room</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('home-office')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/home-office.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Home office</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('lighting')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/lighting.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Lighting</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('decoration')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/home-decor.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Decoration</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        <div class="category" onclick="filterProduct('dining-room')">
+            <div class="category-image">
+                <a href=""><img src="../assets/img2/dining-room.png" alt=""></a>
+            </div>
+            <div class="category-detail">
+                <a href="">Dining room</a>
+                <h2>item</h2>
+            </div>
+        </div>
+        
+    </section>
+    <div class="line-page"></div>
+    <!-- categories end -->
+
+
     <!-- product start -->
     <section class="list__products">
-        <div class="products"></div>
+        <div class="products">
+            <!-- <div class="product">
+                <div class="thumbnail">
+                    <a href="/product/?id=${x.id}"><img src="${x.thumbnail}" alt="" class = "product-img"></a>
+                    <h4 class="discount">-16%</h4>
+                    <i class="fa-solid fa-heart"></i>
+            over        <h2 class="shop-item-button">Add to card</h2>
+                </div>
+                <div class="infor">
+                    <h3 class = "product-name">${x.name}</h3>
+                    <h2 class = "product-price">$${x.price}</h2>
+                    <div class="ratings">
+                        <div class="rating">
+                           ${ratingHtml}
+                        </div>
+                        <div class="rating">
+                            <h4>${x.rating} ratings</h4>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        
         <div class="pagination-product"></div>
     </section>
     <!-- product end -->

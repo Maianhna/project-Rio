@@ -89,7 +89,7 @@ header .head-wrap .menu .list__items .item:hover::before {
 header .head-wrap .head_btn {
   width: 200px;
   height: 98px;
-  padding-left: 70px;
+  
 }
 
 header .head-wrap .head_btn a {
@@ -99,7 +99,7 @@ header .head-wrap .head_btn a {
 header .head-wrap .head_btn a i {
   /* margin: 10px; */
   margin-top: 42px;
-  padding-left: 20px;
+  padding-left: 45px;
   color: #25352a;
 }
 
@@ -549,11 +549,24 @@ button:hover {
 
 
 
-
+/* swiper start */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 30px;
-  color: red;
+  font-size: 20px;
+  color: rgb(147, 184, 119);
+}
+
+.swiper-button-prev::after {
+  margin-right: 4px;
+}
+
+.swiper-button-next::after {
+  margin-left: 4px;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: #283b24;
 }
 
 .swiper {
@@ -602,6 +615,7 @@ button:hover {
   border-radius: 3px;
   top: 7%;
   left: 10%;
+  cursor: pointer;
 }
 
 .swiper .swiper-wrapper .swiper-slide .thumbnail i {

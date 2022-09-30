@@ -50,6 +50,7 @@ tabs.forEach((tab, index) => {
 });
 
 // get id api
+
 const url = new URLSearchParams(location.search);
 const productId = url.get("id");
 const productName = document.querySelector("#product-name");
@@ -57,7 +58,9 @@ const productThumbnail = document.querySelector("#product-thumbnail");
 const productPrice = document.querySelector("#product-price");
 const nameProduct = document.querySelector(".name");
 
+
 // console.log(productId);
+
 fetch(`https://6217947571e7672e53843858.mockapi.io/product/${productId}`)
   .then((res) => res.json())
   .then((data) => {
@@ -69,66 +72,79 @@ fetch(`https://6217947571e7672e53843858.mockapi.io/product/${productId}`)
     nameProduct.innerText = name;
   });
 
-// async () => {
-//   // const baseURL = "https://6217947571e7672e53843858.mockapi.io/";
-//   for (let id = 1; id < 6; id++) {
-//     // return id;
-//     console.log(id);
-//   }
-//   const respond = await fetch(
-//     "https://6217947571e7672e53843858.mockapi.io/product/" +
-//       id +
-//       "/relatedproduct"
-//   );
-//   const goods = await respond.json();
-//   console.log(goods);
 
-//   function renderProduct(data) {
-//     let html = "";
-//     for (let x of data) {
-//       html += `
-//       <div class="swiper-slide">
-//         <div class="thumbnail">
-//             <a href=""><img src="${x.thumbnail}"alt=""></a>
-//             <h4 class="discount">-16%</h4>
-//             <i class="fa-solid fa-heart"></i>
-//             <h2>Add to card</h2>
-//         </div>
-//         <div class="infor">
-//             <h3>${x.name}</h3>
-//             <h2>$${x.price}</h2>
-//             <div class="ratings">
-//               <div class="rating">
-//                 ${ratingHtml}
-//               </div>
-//               <div class="rating">
-//                   <h4>${x.rating} ratings</h4>
-//               </div>
-//             </div>
-//         </div>
-//       </div>
-//     `;
-//     }
-//     return html;
-//   }
-  // renderProduct()
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 40,
-    // If we need pagination
 
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
 
-    // And if we need scrollbar
+$(document).ready(async () => {
+  const baseURL = "https://6217947571e7672e53843858.mockapi.io/";
 
-    autoplay: {
-      delay: 5000,
-    },
-  });
+  const respond = await fetch(baseURL + 'subproduct')
+  const goods = await respond.json();
+  const swiperWrapper = document.querySelector('.swiper-wrapper')
+  function renderProduct(goods) {
+    swiperWrapper.innerHTML = ""
+    for (let x of goods) {
+      const rate = (Math.ceil((x.rating * 2) / 100) / 2) * 5; // cái này để làm tròn kiểu 4.3 nó sẽ thành 4.0 :v
+      let ratingHtml = "";
+      console.log(rate);
+      for (let i = 0; i < Math.floor(rate); ++i) {
+        ratingHtml += `<i class="fa-solid fa-star"></i>`;
+      }
+      for (let i = 0; i < Math.round(rate - Math.floor(rate)); ++i) {
+        ratingHtml += `<i class="fa-solid fa-star-half-stroke"></i>`;
+      }
+      for (let i = 0; i < 5 - Math.round(rate); ++i) {
+        ratingHtml += `<i class="fa-regular fa-star"></i>`;
+      }
+      swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <div class="thumbnail">
+            <a href=""><img src="${x.thumbnail}"alt=""></a>
+            <h4 class="discount">-16%</h4>
+            <i class="fa-solid fa-heart"></i>
+            <h2>Add to card</h2>
+        </div>
+        <div class="infor">
+            <h3>${x.name}</h3>
+            <h2>$${x.price}</h2>
+            <div class="ratings">
+              <div class="rating">
+                ${ratingHtml}
+              </div>
+              <div class="rating">
+                  <h4>${x.rating} ratings</h4>
+              </div>
+            </div>
+        </div>
+      </div>
+    `;
+    }
+  }
+ renderProduct(goods)
+
+});
+
+ 
+
+
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 40,
+  // If we need pagination
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+
+  autoplay: {
+    delay: 5000,
+  },
+});
